@@ -7,7 +7,6 @@ The task executer takes a url, and crawls it for more urls that match a certain 
 
 import argparse
 import BeautifulSoup
-import constants
 import datetime
 import json
 import pika
@@ -15,7 +14,6 @@ import random
 import re
 import requests
 import os
-import utils
 
 from pika import BasicProperties
 from pika.adapters import BlockingConnection

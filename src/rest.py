@@ -35,7 +35,7 @@ def start(db, messaging):
     client = MongoClient(db)
     database = client.get_default_database()
 
-    app.run()
+    app.run(host="0.0.0.0")
 
 
 def validate_json(f):
@@ -60,8 +60,7 @@ def post():
         "id": str(uuid.uuid4()), 
         "files": [], 
         "total": len(data['urls']), 
-        "completed": 0,
-        "updated": datetime.datetime.utcnow() }
+        "completed": 0 }
     database.tasks.insert(job)
 
     for url in data['urls']:
