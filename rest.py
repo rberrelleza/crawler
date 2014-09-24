@@ -84,12 +84,4 @@ def get(job_id):
     else:
         del job["_id"]
         return jsonify(job)
-
-
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Webserver to crawl some urls.')
-    parser.add_argument('--messaging', dest='messaging', default="amqp://guest:guest@localhost:5672/%2F")
-    parser.add_argument('--db', dest='db', default="mongodb://server:tasks@127.0.0.1:27017/tasks")
-    args = parser.parse_args()
-    start(args.db, args.messaging)
     
