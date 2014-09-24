@@ -1,0 +1,5 @@
+BeautifulSoup
+flask
+pika
+pymongo
+requests
