@@ -2,4 +2,4 @@
 
 service mongod start
 service rabbitmq-server start
-python crawler/rest.py
+python crawler/$ROLE.py --messaging $MESSAGING --db $DB
